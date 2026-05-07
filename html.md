@@ -98,7 +98,7 @@ html标签由尖括号包围,一般是成对出现如<html> </html>,只有少量
 #### 超链接标签:<a>
  语法格式
  ```
- <s href="跳转目标" target="目标窗口弹出方式">文本或图像</a>
+ <a href="跳转目标" target="目标窗口弹出方式">文本或图像</a>
  ```
 超链接标签属性的作用
  |属性|作用     |
@@ -112,8 +112,8 @@ html标签由尖括号包围,一般是成对出现如<html> </html>,只有少量
 4. 下载链接:herf里的链接是一个文件或压缩包
 5. 网页元素链接:在网页中的各种网页元素,如文本,图像,表格,音频,视频等都可以添加超链接
 6. 锚点链接:点击链接后可以快速定位到页面中的某个位置	
-	在链接文本的href属性中，设置属性值为#名字的形式，如:`a href="#two">第二级</a>`
-	找到目标位置标签，里面添加一个id属性=刚才的名字，如:`h3 id="two”>第2集介绍</h3>`
+	在链接文本的href属性中，设置属性值为#名字的形式，如:`<a href="#two">第二级</a>`
+	找到目标位置标签，里面添加一个id属性=刚才的名字，如:`<h3 id="two”>第2集介绍</h3>`
 
 #### 注释
 html中的注释:`<!-- 注释内容 -->`
@@ -122,5 +122,241 @@ html中的注释:`<!-- 注释内容 -->`
 
 ![QQ_1778131722852](D:\study\frontend-learning\img\QQ_1778131722852.png)
 
-### 1.4 综合案例
+### 1.4表格标签
+#### 基本语法
+```html
+<table>
+	<tr>
+		<td></td>
+	<tr>
+    </tr>
+</table>
+```
+#### 表头单元格标签
+
+相较于`<td><td>` ,`<th><th>`的文字会加粗
+
+| 属性名      | 属性值            | 描述                                           |
+| ----------- | ----------------- | ---------------------------------------------- |
+| align       | left,center,right | 规定表格相对元素的对齐方式                     |
+| border      | 1或""             | 规定表格单元是否拥有边框,默认为"",表示没有边框 |
+| cellpadding | 像素值            | 归定单元边沿与其内容之间的空白,默认1像素       |
+| cellspacing | 像素值            | 规定单元格之间的空白,默认2像素                 |
+| width       | 像素值或百分比    | 规定表格的宽度                                 |
+
+示例:
+
+```
+<table align="center" border="1" cellpadding="0" cellspacing="0>
+	...
+</table>
+```
+
+#### 表格结构标签
+
+<thead>标签表格的头部区域
+
+<tbody>标签表格的主题区域
+
+```html
+<table>
+    <thead>
+    	<tr>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+        </tr>
+    </tbody>
+</table>    
+```
+
+#### 合并单元格
+
+合并单元格的方式:
+
+跨行合并: rowspan="合并单元格的个数"    (最上侧单元格为目标单元格)
+
+跨列合并: colspan="合并单元格的个数"      (最左侧单元格为目标单元格)
+
+```html
+<table>
+    <tr>
+        <td></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr>
+        <td roespan="2"></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+```
+
+### 2.列表标签
+
+根据使用场景不同,分为无序列表,有序列表和自定义列表
+
+#### 无序列表
+
+```html
+<ul>
+    <li>列表项1</li>
+    <li>列表项2</li>
+    <li>列表项3</li>
+</ul>
+```
+
+"<ul>"标签只能放"<li>",而"<li>"标签可以容纳所有元素
+
+无序列表的各个列表项之间没有顺序之分
+
+#### 有序列表
+
+```
+<ol>
+	<li>排行榜1</li>
+	<li>排行榜2</li>
+	<li>排行榜3</li>
+</ol>
+```
+
+"<ol>"标签只能放"<oi>",而"<li>"标签可以容纳所有元素
+
+有序列表的各个列表项之间有顺序之分
+
+#### 自定义列表
+
+```
+<dl>
+	<dt>名词1</dt>
+	<dd>名词1解释</dd>
+	<dd>名词2结婚</dd>
+</dl>
+```
+
+"<dl>"里面只能放"<dt>"和"<dd>","<dt>''和"<dd>"可以容纳所有元素
+
+
+
+### 表单标签
+
+使用表单用来收集用户信息
+
+"<form>"用于定义表单域
+
+```
+<form action="url地址" method="提交方式" name="表单域名称">
+	各种表单元素控件
+</form>
+```
+
+| 属性   | 属性值   | 作用                                              |
+| ------ | -------- | ------------------------------------------------- |
+| action | url地址  | 用于指定接收并处理表单数据的服务器程序的url地址   |
+| method | get/post | 用于设置表单数据的提交方式,其取值为get或post      |
+| name   | 名称     | 用于指定表单的名称,以区分用一个页面中的多个表单域 |
+
+#### input标签
+
+1.<input>输入表单元素
+
+```
+<input type="属性值" />
+```
+
+<input />标签为单标签
+
+type属性设置不同的属性值用来指定不同的控件类型
+
+| 属性值   | 描述                                                     |
+| -------- | -------------------------------------------------------- |
+| button   | 定义可点击按钮(多数情况下,用于通过JavaScript启动脚本)    |
+| checkbox | 定义复选框                                               |
+| file     | 定义输入字段和"浏览"按钮,共文件上传                      |
+| hidden   | 定义隐藏的输入字段                                       |
+| password | 定义密码字段.该字段中的字符被掩码                        |
+| radio    | 定义单选按钮                                             |
+| reset    | 定义重置按钮.重置按钮会清除表单的所有数据                |
+| submit   | 定义提交按钮.提交按钮会把表单数据发送到服务器            |
+| text     | 定义单行的输入字段,用户可在其中刻入文本,默认宽度为20字符 |
+| image    | 定义图像形式的提交按钮                                   |
+
+例子
+
+```html
+<form>
+    用户名:<input type="text" name=username> <br>
+    密码:<input type="password" name-password> <br>
+    性别:男 <input type="radio" name="sex"> 女 <input type="radio" name="sex"> <br>
+    爱好:吃<input type="checkbox" name="hobby"> 喝<input type="checkbox" name="hobby"> 玩	<input type="checkbox" name="hobby"> <br>
+    <input type="submit" value="免费注册">
+    <input type="reset" value="重新填写">
+    <input type="button" value="获取验证码">
+    上传照片: <input type="file">
+</form>    
+```
+
+| 属性      | 属性值       | 描述                                |
+| --------- | ------------ | ----------------------------------- |
+| name      | 由用户自定义 | 定义input元素的名称                 |
+| value     | 由用户自定义 | 规定input元素的值                   |
+| checked   | checked      | 规定此input元素首次加载时应当被选中 |
+| maxlength | 正整数       | 规定输入字段中的字符最大长度        |
+
+1.name和value是每个表单元素都有的属性值.主要给后台人员使用
+
+2.name表单元素的名字,单选框和复选框需要有相同的name
+
+3.checked属性主要针对于单选按钮和复选框,主要作用是一打开页面,可以默认选中某个表单元素
+
+4.maxlength是用户在表单元素输入的最大字符数
+
+label标签
+
+label标签为input元素定义标注,用于绑定一个表单元素,当点击label标签内的内容时浏览器会自动将焦点或光标转到或选择对应的表单元素,用于增加用户体验
+
+```
+<label for="sex">男</label>
+<input type="radio" name="sex" id="sex" />
+```
+
+label标签的for属性必须和input标签的id属性一致
+
+#### select标签
+
+```
+<form>
+	<select>
+		<option>选项1</option>
+		<option>选项2</option>
+		<option>选项3</option>
+	</select>
+</form>
+```
+
+1,select中至少包含一对option
+
+2,在select中定义selected="selected"时,当前项为默认选中项
+
+#### textarea标签
+
+当用户输入内容较多的情况下,使用testarea,此标签可以用于定义多行文本输入的控件,常见于留言板,评论
+
+```
+<form>
+	<testarea rows="4" clos="30">
+	</testarea>
+</form>
+```
+
+rows控制显示多少行
+
+clos控制一行多少字符
 
