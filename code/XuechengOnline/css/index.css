@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f3f5f7;
+    font-family: Microsoft YaHei, 微软雅黑, 宋体, SimSun;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.head {
+    height: 100px;
+    background-color: rgb(243, 245, 247);
+}
+
+.head .top {
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.logo a {
+    width: 200px;
+    height: 42px;
+    margin: 29px auto;
+    float: left;
+}
+
+
+.head .top .nav {
+    height: 42px;
+    float: left;
+    margin: 29px 70px;
+}
+
+.nav li {
+    height: 42px;
+    line-height: 42px;
+    margin-right: 26px;
+    float: left;
+}
+
+.nav li a {
+    display: block;
+    padding: 0 9px;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+
+.nav li a:hover {
+    border-bottom: 2px solid rgb(0, 164, 255);
+}
+
+.search {
+    width: 412px;
+    height: 42px;
+    float: left;
+    border: 1px solid rgb(0, 164, 255);
+    margin: 29px 0;
+
+}
+
+.search input {
+    float: left;
+    width: 360px;
+    height: 40px;
+    padding: 20px;
+    border: 0;
+}
+
+.search input::placeholder {
+    font-size: 14px;
+    color: #bfbfbf;
+}
+
+.search button {
+    width: 50px;
+    height: 40px;
+    background-image: url(../img/btn.png);
+    border: 0;
+}
+
+.user {
+    float: left;
+    margin: 29px 0 0 69px;
+    height: 42px;
+    line-height: 42px;
+
+}
+
+.user img {
+    vertical-align: middle;
+}
+
+.wrapper {
+    height: 420px;
+    background-color: rgb(28, 3, 108);
+}
+
+.banner {
+    width: 1200px;
+    height: 420px;
+    margin: 0 auto;
+    background-image: url(../img/banner2.png);
+}
+
+.banner_left {
+    float: left;
+    width: 190px;
+    height: 420px;
+    background-color: rgba(19, 1, 75);
+}
+
+.banner_left li a {
+    display: block;
+    height: 46px;
+    line-height: 46px;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    padding-left: 30px;
+    color: rgb(255, 255, 255);
+}
+
+.banner_left li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.banner_left span {
+    color: rgb(255, 255, 255);
+    height: 46px;
+    line-height: 46px;
+    font-size: 14px;
+    padding-right: 30px;
+    float: right;
+}
+
+.banner_right {
+    float: right;
+    width: 230px;
+    height: 300px;
+    margin: 60px 0 0 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.banner_right h2 {
+    height: 48px;
+    line-height: 48px;
+    font-size: 18px;
+    background-color: rgb(155, 206, 234);
+    color: #ffffff;
+    text-align: center;
+}
+
+
+.content {
+    padding: 0 18px;
+}
+
+.content dl {
+    padding: 12px 0;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.content dt {
+    font-size: 16px;
+    color: #4e4e4e;
+}
+
+.content dd {
+    font-size: 14px;
+    color: #4e4e4e;
+}
+
+.more {
+    display: block;
+    /* margin: 4px 14px 0; */
+    margin: 4px auto 0;
+    width: 200px;
+    height: 40px;
+    border: 1px solid #00a4ff;
+
+    font-size: 16px;
+    color: #00a4ff;
+    font-weight: 700;
+
+    text-align: center;
+    line-height: 40px;
+}
+
+.recommend {
+    width: 1200px;
+    height: 60px;
+    margin: 20px auto 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.recommend h2 {
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    font-size: 18px;
+    color: rgb(49, 171, 255);
+    padding: 18px 28px;
+    font-weight: 400;
+}
+
+.recommend p {
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    margin: 18px 0;
+    padding: 0px 28px;
+    font-size: 14px;
+    color: #4e4e4e;
+    border-left: 1px solid #363636;
+
+}
+
+.recommend a {
+    height: 24px;
+    line-height: 24px;
+    float: right;
+    font-size: 14px;
+    margin: 18px 0;
+    padding: 0px 28px;
+    color: rgb(49, 171, 255);
+    font-weight: 400;
+}
+
+.box_wrapper {
+    width: 1200px;
+    height: 30px;
+    margin: 20px auto 0;
+    background-color: rgb(243, 245, 247);
+}
+
+.box_wrapper h2 {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+}
+
+.box_wrapper a {
+    height: 30px;
+    line-height: 30px;
+    float: right;
+    color: rgb(104, 104, 104);
+    font-weight: 400;
+}
+
+.product {
+    width: 1200px;
+    margin: 20px auto 0;
+    background-color: rgb(243, 245, 247);
+}
+
+.product a {
+    float: left;
+    width: 230px;
+    height: 257px;
+    margin: 0 12.5px 12.5px 0;
+    background-color: #fff;
+}
+
+.product a:nth-child(5n) {
+    margin-right: 0;
+}
+
+.product a img {
+    width: 230px;
+    height: 150px;
+}
+
+.product a h3 {
+    padding: 10px;
+    font-size: 14px;
+    color: #050505;
+    font-weight: 400;
+}
+
+.product a p {
+    padding: 0 10px;
+    font-size: 12px;
+    color: #999;
+}
+
+.bottom {
+    height: 500px;
+    margin: 20px auto 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.bottom_wrapper {
+    width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.bottom_left {
+    float: left;
+    width: 500px;
+    height: 500px;
+}
+
+.bottom_left img {
+    width: 200px;
+    height: 42px;
+    margin: 20px 0 10px;
+}
+
+.bottom_left p {
+    font-size: 12px;
+    color: rgb(142, 142, 142);
+}
+
+.bottom_left a {
+    display: block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid rgb(0, 164, 255);
+    color: rgb(0, 164, 255);
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.bottom_right {
+    float: right;
+    width: 700px;
+    height: 500px;
+    padding: 0 18px;
+}
+
+.bottom_right dl {
+    float: right;
+    padding: 12px 0;
+    margin-left: 100px;
+}

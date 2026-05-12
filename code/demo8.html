@@ -9,123 +9,147 @@
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            background-color: rgb(245, 245, 245);
+            background-color: #f5f5f5;
+            font-family: Microsoft YaHei, sans-serif;
         }
 
-        .container {
+        .wrapper {
+            width: 1240px;
+            margin: 40px auto;
+            display: flex;
+            gap: 14px;
+        }
+
+        .banner {
+            width: 234px;
+            height: 614px;
+            overflow: hidden;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .banner:hover {
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 8px;
+        }
+
+        .product {
+            width: 992px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .card {
             width: 234px;
             height: 300px;
-            overflow: hidden;
-
             background-color: #fff;
             text-align: center;
-            border: none;
+            overflow: hidden;
         }
 
-        .img {
+        .card:hover {
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px;
+        }
+
+        .card img {
             width: 160px;
             height: 160px;
-        }
-
-        .side_img {
-            width: 234px;
-            height: 614px;
-        }
-
-        .one {
-            display: inline-block;
-        }
-
-        .two {
-            width: 978px;
-            height: 614px;
-            display: inline-block;
-
+            display: block;
+            object-fit: cover;
+            margin: 20px auto;
         }
 
         .title {
-            color: rgb(0, 0, 0);
             font-size: 15px;
-            width: 214px;
-            height: 20px;
             font-weight: 400;
-            margin: 0 auto;
+            color: #333;
+            margin-top: 18px;
+            padding: 0 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .intro {
+            font-size: 12px;
+            color: #b0b0b0;
+            margin-top: 8px;
+            padding: 0 15px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
 
         .price {
-            color: rgb(255, 132, 48);
             font-size: 16px;
-            font-weight: 400;
-        }
-
-        .introduction {
-            color: rgb(193, 193, 193);
-            font-size: 12px;
-            margin: 0px auto;
+            color: #ff6700;
+            margin-top: 15px;
         }
     </style>
 </head>
 
 <body>
-    <div style="width: 1246px; padding: 20px;margin: 0 auto;">
-        <div class="one side_img">
+    <div class="wrapper">
+        <div class="banner">
             <img src="..//img/mi00.webp">
         </div>
-        <div class="two">
-            <div>
-                <div class="one container">
-                    <img src="..//img/mi01.webp" class="img">
-                    <h3 class="title">REDMI K90 Max</h3>
-                    <p class="introduction">风冷双芯 性能魔王</p>
-                    <p class="price">3199元起</p>
-                </div>
-                <div class="one container">
-                    <img src="..//img/mi02.webp" class="img">
-                    <h3 class="title">REDMI Turbo 5 Max</h3>
-                    <p class="introduction">天玑 9500s | 9000mAh 最大小米电池</p>
-                    <p class="price">2499元起</p>
-                </div>
-                <div class="one container">
-                    <img src="..//img/mi03.webp" class="img">
-                    <h3 class="title">REDMI Turbo 5</h3>
-                    <p class="introduction">天玑 8500-Ultra | 6.9"黄金尺寸|1.5...</p>
-                    <p class="price">2299元起</p>
-                </div>
-                <div class="one container">
-                    <img src="..//img/mi04.webp" class="img">
-                    <h3 class="title">Xiaomi 17 Ultra 徕卡版</h3>
-                    <p class="introduction">全方位徕卡相机体验 | 徕卡2亿像素光...</p>
-                    <p class="price">7999元起</p>
-                </div>
+        <div class="product">
+            <div class="card">
+                <img src="..//img/mi01.webp">
+                <h3 class="title">REDMI K90 Max</h3>
+                <p class="intro">风冷双芯 性能魔王</p>
+                <p class="price">3199元起</p>
             </div>
-            <div>
-                <div class="one container">
-                    <img src="..//img/mi05.webp" class="img">
-                    <h3 class="title">Xiaomi 17 Ultra</h3>
-                    <p class="introduction">徕卡2亿像素光学变焦 | 徕卡1英寸光...</p>
-                    <p class="price">6999元起</p>
-                </div>
-                <div class="one container">
-                    <img src="..//img/mi06.webp" class="img">
-                    <h3 class="title">REDMI K90 Pro Max</h3>
-                    <p class="introduction">第五代 晓龙R8至尊版 | 超级像素护眼...</p>
-                    <p class="price">4199元起</p>
-                </div>
-                <div class="one container">
-                    <img src="..//img/mi07.webp" class="img">
-                    <h3 class="title">REDMI K90</h3>
-                    <p class="introduction">晓龙R8至尊版 | Sound by Bose 联合...</p>
-                    <p class="price">2599元起</p>
-                </div>
-                <div class="one container">
-                    <img src="..//img/mi08.webp" class="img">
-                    <h3 class="title">Xiaomi 17 Pro Max</h3>
-                    <p class="introduction">徕卡光影大师 移动影响系统 | 徕卡 5X...</p>
-                    <p class="price">5999元起</p>
-                </div>
+            <div class="card">
+                <img src="..//img/mi02.webp">
+                <h3 class="title">REDMI Turbo 5 Max</h3>
+                <p class="intro">天玑 9500s | 9000mAh 最大小米电池</p>
+                <p class="price">2499元起</p>
+            </div>
+            <div class="card">
+                <img src="..//img/mi03.webp">
+                <h3 class="title">REDMI Turbo 5</h3>
+                <p class="intro">天玑 8500-Ultra | 6.9"黄金尺寸|1.5...</p>
+                <p class="price">2299元起</p>
+            </div>
+            <div class="card">
+                <img src="..//img/mi04.webp">
+                <h3 class="title">Xiaomi 17 Ultra 徕卡版</h3>
+                <p class="intro">全方位徕卡相机体验 | 徕卡2亿像素光...</p>
+                <p class="price">7999元起</p>
+            </div>
+            <div class="card">
+                <img src="..//img/mi05.webp">
+                <h3 class="title">Xiaomi 17 Ultra</h3>
+                <p class="intro">徕卡2亿像素光学变焦 | 徕卡1英寸光...</p>
+                <p class="price">6999元起</p>
+            </div>
+            <div class="card">
+                <img src="..//img/mi06.webp">
+                <h3 class="title">REDMI K90 Pro Max</h3>
+                <p class="intro">第五代 晓龙R8至尊版 | 超级像素护眼...</p>
+                <p class="price">4199元起</p>
+            </div>
+            <div class="card">
+                <img src="..//img/mi07.webp">
+                <h3 class="title">REDMI K90</h3>
+                <p class="intro">晓龙R8至尊版 | Sound by Bose 联合...</p>
+                <p class="price">2599元起</p>
+            </div>
+            <div class="card">
+                <img src="..//img/mi08.webp">
+                <h3 class="title">Xiaomi 17 Pro Max</h3>
+                <p class="intro">徕卡光影大师 移动影响系统 | 徕卡 5X...</p>
+                <p class="price">5999元起</p>
             </div>
         </div>
     </div>
